@@ -1,0 +1,90 @@
+<div class="class1" >
+    <h1>Lesson  {{class1}}</h1>
+    <p>Lesson  {{class1.toUpperCase()}}</p>
+    <p>{{class1.length}}</p>
+    <p>{{2+2}}</p>
+    <p>{{greetUser()}}</p>
+    <p>{{siteUrl}}</p>
+    
+</div>
+<hr>
+<div class="class2" >
+    <h1>Lesson  {{class2}}</h1>
+    <input [id]="myId" type="text" value="first name">
+     <input bind-disabled="isDisabled" id="{{myId}}" type="text" value="first name">
+</div>
+<hr>
+<div class="class3">
+    <h1 class="text-success">Lesson {{class3}}</h1>
+    <p bind-class=successclass>working</p>
+    <p class="text.special" bind-class="successclass">regular class attribute not working infront of binding</p>
+    <p [class.text-danger]="haserror">class binding working</p>
+    <h6   [ngStyle]="stylebinding" >class binding working</h6>
+    <p [ngClass]="classbinding">class binding working</p>
+     
+</div>
+<hr>
+<div class="class4">
+    <h1 [style.color]="'red'">Lesson {{class4}}</h1>
+    <p [style.color]="highlightcolor">giving direct name working</p>
+    <p [ngStyle]="titlestyles">binding styles working </p>
+</div>
+<hr>
+<div class="class5">
+    <h1>Lesson {{class5}}</h1>
+    <button (click)="onclick()">Greet</button>
+    <button (click)="greeting='This is event binding'">Greet</button>
+    {{greeting}}
+</div>
+<hr>
+<div class="class6">
+<h1>Lesson {{class6}}</h1>
+<input type="text">
+<button (click)="logmessage()">log</button> 
+</div>
+<hr>
+<div class="class7">
+<h1>Lesson {{class7}}</h1>
+<input type="text" [(ngModel)]="_name" >
+<p>{{_name}}</p>
+</div>
+<hr>
+<div class="class8">
+<h1 *ngIf="displayname">Lesson {{class8}}</h1>
+</div>
+<hr>
+<div class="class9" [ngSwitch]="color">
+    <h1>Lesson {{class9}}</h1>
+    <div *ngSwitchCase="'red'">you picked red color</div>
+    <div *ngSwitchCase="'blue'">you picked blue color</div>
+    <div *ngSwitchCase="'green'">you picked green color</div>
+    <div *ngSwitchCase="'yellow'">you picked yellow color</div>
+    <div *ngSwitchDefault>pick again</div>
+</div>
+<hr>
+<div class="class10">
+    <h1>Lesson {{class10}}</h1>
+    <div *ngFor="let color of colors; first as f">
+        <h2>{{f}} {{color}}</h2>
+    </div>
+</div>
+<hr>
+<div class="class11">
+    <h1>Lesson {{class11}}</h1>
+    <h2>{{"hello" + Name}}</h2>
+</div>
+
+<div class="class12">
+    <h1>Lesson {{class10}}</h1>
+    <div *ngFor="let employee of employeeData">
+        <h2> {{employee.id}} {{employee.name}} {{employee.age}}</h2>
+    </div>
+</div>
+<hr>
+<div class="class13">
+    <h1>Lesson {{class13}}</h1>
+    <h2>Employee List</h2>
+    <ul *ngFor="let employee of employeeData">
+        <li>{{employee.name}}</li>
+    </ul>
+</div>

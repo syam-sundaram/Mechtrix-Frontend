@@ -1,0 +1,192 @@
+.center{
+    text-align: center;
+    padding-top: 150px;
+    filter: drop-shadow(0 0 20px rgba(255, 107, 0, 0.4));
+    transition: transform 0.3s ease;
+    
+}
+.title{
+    text-align: center;
+    padding-top: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 6.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+
+    color: white;
+
+    text-shadow:
+        0 0 8px rgba(255, 140, 0, 0.35),
+        0 0 18px rgba(255, 140, 0, 0.25),
+        0 0 30px rgba(255, 140, 0, 0.15);
+        
+        animation: fadeInUp 1s ease-out;
+    transition: 0.3s ease;
+}
+    .bg{
+
+    background:
+        linear-gradient(rgba(0,0,0,.90),
+        rgba(0,0,0,.90)),
+        url("/bg img.png");
+    background-size:cover;
+    background-position:center;
+    width:100%;
+    min-height:110vh;
+    padding-bottom:100px;
+    position:relative;
+}
+.logo{
+    transition: transform 0.4s ease, filter 0.4s ease;
+     position: relative;
+     
+}
+
+.logo:hover{
+    transform: scale(1.1);
+
+    filter:
+       drop-shadow(0 0 25px rgb(255, 94, 0));
+}
+
+.info{
+    text-align: center;
+    color: white;
+    font-family: inherit;
+    padding-top: 20px;
+    word-spacing: 3px;
+    letter-spacing: 1.5px;
+}
+.info_1{
+    font-style: italic;
+    text-align: center;
+    color: rgb(255, 94, 0);
+    font-family: inherit;
+    padding-top: 20px;
+    word-spacing: 3px;
+    letter-spacing: 1.5px;   
+}
+.info_2{
+    text-align: center;
+    color: rgb(255, 94, 0);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 20px;
+    word-spacing: 3px;
+    letter-spacing: 1.5px;
+}
+.info_3{
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    word-spacing: 3px;
+    letter-spacing: 1.5px;
+    margin:3%;
+}
+.app_but{
+    width:180px;
+    margin:10px auto;
+    text-align:center;
+    padding:10px;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(255, 94, 0);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+            border: 3px solid rgb(255, 94, 0);
+            border-radius: 5px;
+            animation: glow 1s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px rgb(255, 94, 0),
+                    0 0 5px rgb(255, 94, 0),
+            }
+
+            to {
+                box-shadow: 0 0 20px rgb(255, 94, 0),
+                    0 0 15px rgb(255, 94, 0),
+            }
+}
+.app_but:hover{
+    transition: transform 0.4s ease, filter 0.4s ease;
+    transform: scale(1.1);
+    background: rgb(255, 105, 5);
+    animation:none;
+    filter:
+       drop-shadow(0 0 10px rgb(255, 94, 0));
+}
+.app_txt{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.dscr{
+    display: block;
+    width:200px;
+    margin:20px auto;
+    text-align:center;
+    padding: 10px;
+    border: 3px solid rgb(255,94,0);
+    border-radius: 5px;
+    color: rgb(255,94,0);
+    font-family: fantasy;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color .4s ease;
+}
+
+.dscr::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(255,94,0);
+    transform: translateX(-100%);
+    transition: transform .4s ease;
+    z-index: -1;
+}
+
+.dscr:hover::before{
+    transform: translateX(0);
+}
+
+.dscr:hover{
+    color: white;
+}
+.video{
+    margin-top: 60px;
+    padding: 20px;
+    margin-left: 15%;
+    background-color: black;
+  width: 70%;
+  height: 35%;
+  border: 1px solid  rgb(255,94,0);
+}
+.video_pl{
+    text-align: center;
+     background-color: black;
+     width: 100%;
+  height: 50vh;
+}
+.mtn{
+    text-align: center;
+    padding-top: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+
+    color: white;       
+    margin-top: 150px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 25px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgb(255,94,0);
+}

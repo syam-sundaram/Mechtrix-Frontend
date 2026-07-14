@@ -1,0 +1,75 @@
+.ttle {
+    text-align: center;
+    padding-top: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: white;
+    margin-top: 60px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 25px;
+    text-decoration-thickness: 5px;
+    text-decoration-color: rgb(255, 94, 0);
+}
+
+.bgc {
+    background-color: black;
+    min-height: 100vh;
+    padding-bottom: 5px;
+}
+
+.evt {
+    color: white;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1.5px;
+    font-style: italic;
+    text-align: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.maj {
+    margin: auto;
+    width: 1200px;
+    height: 800px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.mins {
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    display: block;
+    padding: 20px;
+    border: 2px solid rgb(255, 94, 0);
+    width: 550px;
+    height: 350px;
+    box-sizing: border-box;
+    border-left: 8px solid rgb(255, 94, 0);
+}
+
+.mins h4 {
+    color: rgb(255, 94, 0);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: left;
+}
+
+.mins p {
+    color: rgba(255, 255, 255, 0.776);
+    text-align: justify;
+    padding-left: 20px;
+}
+
+.mins:hover {
+    box-shadow:
+        0 0 10px rgb(255, 94, 0),
+        0 0 10px rgba(255, 94, 0, .5);
+}

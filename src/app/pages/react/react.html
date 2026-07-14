@@ -1,0 +1,80 @@
+<div class="container-fluid pdng">
+  <h2>Student Registration</h2>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>UserName<small class="star">*</small></label>
+      <input [class.is-invalid]="registrationForm.get('username')?.invalid &&
+                      registrationForm.get('username')?.touched" type="text" class="form-control"
+        formControlName="username">
+
+      <small [class.d-none]="registrationForm.get('username')?.valid ||
+                  registrationForm.get('username')?.untouched" class="text-danger">
+        UserName is required
+      </small>
+    </div>
+    <div class="form-group">
+      <label>Password<small class="star">*</small></label>
+      <input [class.is-invalid]="registrationForm.get('password')?.invalid &&
+                      registrationForm.get('password')?.touched" type="password" class="form-control"
+        formControlName="password">
+
+      <small [class.d-none]="registrationForm.get('password')?.valid ||
+                  registrationForm.get('password')?.untouched" class="text-danger">
+        Password is required
+      </small>
+
+    </div>
+    <div class="form-group">
+      <label>Confirm Password<small class="star">*</small></label>
+      <input [class.is-invalid]="registrationForm.errors?.['misMatch']" type="password" class="form-control"
+        formControlName="confirm_password">
+
+      <small *ngIf="registrationForm.hasError('misMatch')" class="text-danger">
+        Password doesn't match
+      </small>
+    </div>
+    <div>
+      <button class="btn btn-success  mt-3" type="submit">
+        Enroll
+      </button>
+      <button class="btn btn-primary  ml-20 mt-3" (click)="LoadApiData()">
+        LoadApiData
+      </button>
+      <button class="btn btn-primary  ml-20 mt-3" (click)="patchApiData()">
+        patch
+      </button>
+    </div>
+
+  </form>
+
+  <p>{{registrationForm.value | json }}</p>
+
+  <div *ngIf="loading" class="loader-overlay">
+    <div class="spinner-border text-light" role="status"></div>
+  </div>
+
+  <div>
+    <table *ngIf="UsersData.length>0" class="table table-bordered">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>UserName</th>
+          <th>Password</th>
+          <th>Confirm Password</th>
+        </tr>
+
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let s of UsersData">
+          <td>{{s.id}}</td>
+          <td>{{s.user_name}}</td>
+          <td>{{s.password}}</td>
+          <td>{{s.confirm_password}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+</div>

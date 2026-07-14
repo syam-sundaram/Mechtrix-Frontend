@@ -1,0 +1,196 @@
+<div class="container-fluid bgc">
+    <div class="center">
+        <img src="/lg.png" class="logo" width="125px" height="125px" ;display: block;>
+    </div>
+    <h2>APPLY TO MECHTRIX</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-row">
+
+            <div class="left">
+                <label class="heading">NAME <span class="star">*</span></label>
+                <p>Your full name</p>
+            </div>
+
+            <div class="right">
+                <input type="text" class="form-control" placeholder="Enter your name" formControlName="name">
+
+                <small *ngIf="registrationForm.get('name')?.invalid &&
+                           registrationForm.get('name')?.touched" class="text-danger">
+                    Name is required
+                </small>
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="left">
+                <label class="heading">ROLL NUMBER <span class="star">*</span></label>
+                <p>NIT Warangal roll number</p>
+            </div>
+
+            <div class="right">
+                <input type="text" class="form-control" placeholder="Example: 23MEB0B01" formControlName="rollnumber">
+
+                <small *ngIf="registrationForm.get('rollnumber')?.invalid &&
+                           registrationForm.get('rollnumber')?.touched" class="text-danger">
+                    Roll Number is required
+                </small>
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="left">
+                <label class="heading">BRANCH <span class="star">*</span></label>
+                <p>Select your department</p>
+            </div>
+
+            <div class="right">
+
+                <select class="form-control" formControlName="branch">
+
+                    <option value="">Select branch</option>
+
+                    <option>CSE</option>
+                    <option>ECE</option>
+                    <option>EEE</option>
+                    <option>ME</option>
+                    <option>CE</option>
+                    <option>CHE</option>
+                    <option>MME</option>
+                    <option>BT</option>
+
+                </select>
+
+                <small *ngIf="registrationForm.get('branch')?.invalid &&
+                           registrationForm.get('branch')?.touched" class="text-danger">
+                    Branch is required
+                </small>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="left">
+                <label class="heading">YEAR <span class="star">*</span></label>
+                <p>Select your year</p>
+            </div>
+
+            <div class="right">
+
+                <select class="form-control" formControlName="year">
+
+                    <option value="">Select year</option>
+
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+
+                </select>
+
+                <small *ngIf="registrationForm.get('year')?.invalid &&
+                           registrationForm.get('year')?.touched" class="text-danger">
+                    Year is required
+                </small>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="left">
+                <label class="heading">EMAIL <span class="star">*</span></label>
+                <p>Your email ID</p>
+            </div>
+
+            <div class="right">
+
+                <input type="email" class="form-control" placeholder="Example: abc@student.nitw.ac.in"
+                    formControlName="email">
+
+                <small *ngIf="registrationForm.get('email')?.invalid &&
+                           registrationForm.get('email')?.touched" class="text-danger">
+                    Email is required
+                </small>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="left">
+                <label class="heading">CONTACT NUMBER <span class="star">*</span></label>
+                <p>Your phone number</p>
+            </div>
+
+            <div class="right">
+
+                <input type="text" class="form-control" placeholder="Example: 9876543210" formControlName="contact">
+
+                <small *ngIf="registrationForm.get('contact')?.invalid &&
+                           registrationForm.get('contact')?.touched" class="text-danger">
+                    Contact Number is required
+                </small>
+
+            </div>
+
+        </div>
+
+        <div class="form-row">
+
+            <div class="left">
+                <label class="heading">PREFERENCE <span class="star">*</span></label>
+                <p>Select the team you want to join</p>
+            </div>
+
+            <div class="right preference">
+
+                <button type="button" class="team-btn"
+                    [class.active]="registrationForm.get('preference')?.value === 'HBAJA'"
+                    (click)="registrationForm.patchValue({ preference: 'HBAJA' })">
+                    HBAJA
+                </button>
+
+                <button type="button" class="team-btn"
+                    [class.active]="registrationForm.get('preference')?.value === 'INSPACE'"
+                    (click)="registrationForm.patchValue({ preference: 'INSPACE' })">
+                    INSPACE
+                </button>
+            </div>
+
+        </div>
+        <div class="form-row">
+
+            <div class="left">
+                <label class="heading">WHY MECHTRIX?</label>
+                <p>Tell us your interest</p>
+            </div>
+
+            <div class="right">
+
+                <textarea rows="6" class="form-control" placeholder="Explain why you want to join..."
+                    formControlName="reason">
+                </textarea>
+
+            </div>
+
+        </div>
+        <div class="submit-row">
+
+            <button class="submit-btn" type="submit">
+                SUBMIT APPLICATION
+            </button>
+
+        </div>
+
+    </form>
+
+</div>

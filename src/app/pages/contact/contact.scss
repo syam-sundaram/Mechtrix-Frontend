@@ -1,0 +1,105 @@
+.ttle{
+    text-align: center;
+    padding-top: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: white;        
+    margin-top: 60px;
+    text-align: center;
+    text-decoration:underline;
+    text-underline-offset: 25px;   
+    text-decoration-thickness: 5px;
+    text-decoration-color: rgb(255,94,0);
+}
+.bgc{
+    background-color: black;
+    min-height: 100vh;
+    padding-bottom: 5px;
+}
+h6 {
+    color: rgb(255,94,0);
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 80px;
+}
+p {
+    text-align: center;
+    color:white;
+    padding-top: 30px;
+}
+.mail{
+    color:rgb(255,94,0);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 40px;
+    padding-right: 70px;
+    font-size: 18px;
+}
+.ml{
+    color:white;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 70px;
+}
+.adrs{
+    color:white;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 145px;
+}
+.fllw{
+    color: rgb(255,94,0);
+    text-align: center;
+    padding-top: 60px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+.stats{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin-top: 60px;
+    margin-right: 350px;
+    margin-left: 350px;
+}
+.stat-box{
+    width:160px;
+    height:60px;
+    border:2px solid rgb(255,94,0);
+    background:black;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    z-index:1;
+}
+
+.stat-box a{
+    color:rgb(255,94,0);
+    text-decoration:none;
+    transition:color .2s ease;
+    z-index:2;
+}
+
+.stat-box::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: black;
+    transition:color .2s ease;
+    transform:none;
+    z-index:-1;
+}
+
+.stat-box:hover::before{
+    background:rgb(255,94,0);
+}
+
+.stat-box:hover a{
+    color:white;
+}

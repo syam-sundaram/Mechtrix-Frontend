@@ -1,0 +1,206 @@
+
+.star{
+    color: red;;
+}
+.bgc{
+    background-color: black;
+    min-height: 100vh;
+    padding-bottom: 5px;
+    margin-top: 65px;
+}
+.logo{
+    filter: drop-shadow(0 0 25px rgb(255,94,0));
+     position: relative;
+}
+h2 {
+   text-align: center;
+    padding-top: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    padding-bottom: 50px;
+
+    color: white;
+
+    text-shadow:
+        0 0 8px rgb(255,94,0),
+        0 0 18px rgba(255, 140, 0, 0.25),
+        0 0 30px rgba(255, 140, 0, 0.15);
+        
+        animation: fadeInUp 1s ease-out;
+    transition: 0.3s ease;
+}
+.center{
+    text-align: center;
+    padding-top: 100px;
+    filter: drop-shadow(0 0 20px rgba(255, 107, 0, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.form-control{
+    color: white;
+    opacity: 0.6;
+}
+.btn{
+    border: 2px solid rgb(255,94,0);
+    background-color:rgb(255,94,0);
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    column-gap:110px;
+    align-items:flex-start;
+    margin-bottom:55px;
+}
+
+.left{
+    display:flex;
+    flex-direction:column;
+}
+
+.heading{
+    color:rgb(255,94,0);
+    font-size:20px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing:1px;
+    margin-bottom:12px;
+}
+
+.left p{
+    color:rgba(255, 255, 255, 0.443);
+    font-size:18px;
+    font-family:'Arial Narrow', Arial, sans-serif;
+    margin:0;
+}
+
+.star{
+    color:red;
+}
+
+.right{
+    width:100%;
+}
+
+.form-control{
+    width:100%;
+    height:70px;
+    background:#232323;
+    color:white;
+    border:2px solid #353535;
+    border-radius:7px;
+    font-size:20px;
+    padding-left:25px;
+    padding-right:25px;
+    outline:none;
+}
+
+.form-control::placeholder{
+    color:rgba(255, 255, 255, 0.443);
+}
+
+.form-control:focus{
+    border-color:rgb(255,94,0);
+    box-shadow:
+    0 0 8px rgba(255,94,0,.4);
+}
+
+textarea.form-control{
+    height:190px;
+    resize:none;
+    padding-top:18px;
+}
+
+select.form-control{
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    cursor:pointer;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='%23ff6500' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5.5L8 12l6.5-6.5z'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 25px center;
+    background-size:18px;
+}
+
+.preference{
+    display:flex;
+    gap:30px;
+}
+
+.team-btn{
+    width:420px;
+    height:100px;
+    background:#2c2c2c;
+    color:rgb(255,94,0);
+    border:3px solid rgb(255,94,0);
+    border-radius:8px;
+    font-size:22px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing:2px;
+    cursor:pointer;
+}
+
+.team-btn:hover{
+
+    background:rgb(255,94,0);
+
+    color:black;
+
+    box-shadow:
+
+    0 0 18px rgba(255,94,0,.7);
+}
+
+.team-btn.active{
+
+    background:rgb(255,94,0);
+
+    color:black;
+
+    border:3px solid rgb(255,94,0);
+
+    box-shadow:
+
+    0 0 18px rgba(255,94,0,.7);
+
+}
+
+.submit-row{
+    text-align:center;
+    margin-top:70px;
+}
+
+.submit-btn{
+    width:320px;
+    height:70px;
+    background:rgb(255,94,0);
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:22px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing:2px;
+    cursor:pointer;
+    margin-bottom: 30px;
+}
+
+.submit-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+    0 0 18px rgba(255,94,0,.7);
+}
+
+.text-danger{
+    display:block;
+    margin-top:8px;
+    color:red;
+    font-size:15px;
+}
+
+.is-invalid{
+    border:2px solid red;
+    box-shadow:0 0 8px rgba(255,0,0,.4);
+}
+
