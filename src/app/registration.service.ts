@@ -9,7 +9,8 @@ import { Injectable } from '@angular/core';
 })
 export class RegistrationService {
 
-    _url = 'http://localhost:1200';
+    // _url = 'http://localhost:1200';
+    _url = 'https://mechtrix-backend-1.onrender.com/';
     constructor(private _http: HttpClient) { }
     register(userData: any){
       return  this._http.post<any>(this._url+`/enroll`, userData)

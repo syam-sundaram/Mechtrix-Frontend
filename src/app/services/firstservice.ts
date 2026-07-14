@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class Firstservice{
 
-  private api='http://localhost:1200';
+  // private api='http://localhost:1200';
+  private api='https://mechtrix-backend-1.onrender.com/';
 
   constructor(private http:HttpClient){}
 
