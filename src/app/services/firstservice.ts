@@ -14,7 +14,7 @@ export class Firstservice{
   submitApplication(data:any){
 
     return this.http.post<any>(
-      this.api+'/submit-application',
+      this.api+'submit-application',
       data
     );
 
@@ -23,7 +23,7 @@ export class Firstservice{
   getApplications(){
 
     return this.http.get<any>(
-      this.api+'/getApplications'
+      this.api+'getApplications'
     );
 
   }

@@ -13,14 +13,14 @@ export class RegistrationService {
     _url = 'https://mechtrix-backend-1.onrender.com/';
     constructor(private _http: HttpClient) { }
     register(userData: any){
-      return  this._http.post<any>(this._url+`/enroll`, userData)
+      return  this._http.post<any>(this._url+`enroll`, userData)
     }
 
     getuserlogindata(){
-      return this._http.post<any>(this._url+`/getuserloogin`,[])
+      return this._http.post<any>(this._url+`getuserloogin`,[])
     }
 
         getApplications(){
-      return this._http.post<any>(this._url+`/getApplications`,[])
+      return this._http.post<any>(this._url+`getApplications`,[])
     }
 }
